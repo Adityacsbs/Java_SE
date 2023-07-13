@@ -1,1 +1,3 @@
 # Java_SE
+In this Repo. all java concepts are covered from basic to advance by questions 
+Questions are divided into different levels and Important topics Questions are solved....... 
