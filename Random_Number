@@ -1,0 +1,46 @@
+package codes;
+import java.lang.Math;
+import java.util.*;
+
+
+public class Randomno {
+	
+	public static void main(String [] args) {
+		
+		Scanner a = new Scanner(System.in);
+		int count =0;
+		
+		//generate a random number :-
+         int randomm =(int)(Math.random()*101);		
+      //   System.out.println(randomm);
+         
+         System.out.println("Guess the random number between 1 to 100 ");
+         
+         while(true) {
+        	 
+        	 System.out.println("Enter your guess number:-");
+        	 int gn=a.nextInt();
+        	 
+        	 if(randomm==gn) {
+        		 System.out.println("congo, you are right :::::");
+        		 count++;
+        		 System.out.println("The number of chance you hav taken :- "+count);
+        		 break;
+        	 }
+        	 
+        	 else {
+        		 if(randomm>gn) {
+        			 System.out.println("Try again the random number is bigger :-");
+        			 count++;
+        		 }
+        		 else {
+        			 System.out.println("try again,  The random number is smaller :- ");
+        			 count++;
+        		 }
+        	 }
+        	 
+        	 
+         }
+         a.close();         
+}
+}
