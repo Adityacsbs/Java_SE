@@ -1,6 +1,7 @@
 package practice;
 import java.util.*;
 
+
 class Display{
 	
 	public void words(int n) {
