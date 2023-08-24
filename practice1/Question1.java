@@ -11,6 +11,7 @@ class Display{
 			n = n/10 ;
 			str = str + r ;
 			
+			
 		}
 		System.out.println(str);
 		
