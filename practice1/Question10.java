@@ -8,7 +8,7 @@ The sum of the digits is: 7*/
 //code starts here
 
 import java.util.Scanner;  // Import the Scanner class
-class HEXAGONAREA{
+class Question10{
     public static void main(String[] args) {
      
      Scanner n = new Scanner(System.in);
