@@ -1,19 +1,27 @@
-import java.util.Scanner;
-public class Exercise33 { 
- public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input an integer: ");
-        long n = input.nextLong();
-        System.out.println("The sum of the digits is: " + sumDigits(n));
+/*Write a Java program and compute the sum of an integer's digits.
+Input Data:
+Input an integer: 25
+Expected Output
 
-    }
+The sum of the digits is: 7*/
 
-    public static int sumDigits(long n) {
-        int sum = 0;
-        while (n != 0) {
-            sum += n % 10;
-            n /= 10;
-        }
-        return sum;
+//code starts here
+
+import java.util.Scanner;  // Import the Scanner class
+class HEXAGONAREA{
+    public static void main(String[] args) {
+     
+     Scanner n = new Scanner(System.in);
+     int a;int k =0;
+     System.out.println("enter the number to print thier digits");
+     a = n.nextInt();
+     System.out.println("the number is "+ a);
+     while(a>0){
+         int b = a%10;
+         k = b + k;
+         a = a/10;
+     }
+       System.out.println("the sum of number is : "+ k);
+     
     }
 }
