@@ -30,7 +30,8 @@ class Question12 {
            int s= 0;
            int num = 0;
            int oth = 0;
-           
+
+        //new class
            for(int i =0;i<a.length();i++){
                
                if(Character.isLetter(ok[i])){
