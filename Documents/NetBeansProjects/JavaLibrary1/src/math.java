@@ -13,5 +13,9 @@ public static void main(String[] args){
             int rand = (int)(Math.random()*101);
             System.out.println(rand);
     System.out.println(Math.random()*101);
+    String[] cars ={"audi","BMW","ok"};
+    for(String i:cars){
+        System.out.println(i);
+    }
 }    
 }
