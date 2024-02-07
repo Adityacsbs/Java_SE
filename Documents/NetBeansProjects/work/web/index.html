@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%; /* Adjust the width according to your requirement */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            text-align: left;
+        }
+        table {
+            width: 100%;
+        }
+        table td {
+            padding: 10px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensure padding and border are included in the width */
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button[type="reset"] {
+            background-color: #ccc;
+            color: #000;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive styling */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%; /* Adjust the width according to your requirement */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(var(--gradient-start), var(--gradient-end));
+    transition: background 0.5s ease; /* Smooth transition effect */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Other styles for form elements */
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>--Register here--</h1>
+    <hr>
+    <form action="RegisterServlet" method="post">
+        <table>
+            <tr>
+                <td>Enter your Name :</td>
+                <td><input type="text" name="user_name" placeholder="Enter here" required/></td>
+            </tr>
+            <tr>
+                <td>Enter your password :</td>
+                <td><input type="password" name="password" placeholder="Enter here" required/></td>
+            </tr>
+            <tr>
+                <td>Enter your email :</td>
+                <td><input type="email" name="email" placeholder="Enter here" required/></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="user_gen" value="Male" id="male"/>
+                    <label for="male">Male</label>
+                    <input type="radio" name="user_gen" value="Female" id="female"/>
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Select your interest:</td>
+                <td>
+                    <select name="User_course">
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="Sexology">Sexology</option>
+                        <option value="Flutter">Flutter</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" value="agree all condition" name="condition" required/>
+                    <label>You have to agree to register</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Register</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+    <script>
+        // Generate random gradient colors
+function generateRandomGradient() {
+    var startColor = getRandomColor();
+    var endColor = getRandomColor();
+    document.documentElement.style.setProperty('--gradient-start', startColor);
+    document.documentElement.style.setProperty('--gradient-end', endColor);
+}
+
+// Generate random color
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Generate initial gradient on page load
+window.onload = function() {
+    generateRandomGradient();
+};
+
+// Generate new gradient on button click
+document.addEventListener('DOMContentLoaded', function() {
+    var button = document.createElement('button');
+    button.textContent = 'Change Background';
+    button.addEventListener('click', function() {
+        generateRandomGradient();
+    });
+    document.body.appendChild(button);
+});
+
+    </script>
+</body>
+</html>
