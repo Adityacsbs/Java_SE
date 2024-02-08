@@ -3,6 +3,7 @@ package com.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +33,10 @@ public class RegisterServlet extends HttpServlet {
        ok.println("<h3>Gender:"+Gender+"</h3>");
        ok.println("<h3>Course:"+course+"</h3>");
        
-
+       
+      RequestDispatcher rd=req.getRequestDispatcher("/ok");
+      
+      rd.forward(req, resp);
     }
     
     

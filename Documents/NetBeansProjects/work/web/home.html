@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login/Register Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(180deg, #ffdd00, #ff6b00);
+        animation: sunset 20s linear infinite;
+    }
+
+    @keyframes sunset {
+        0% {
+            background: linear-gradient(180deg, #ffdd00, #ff6b00);
+        }
+        50% {
+            background: linear-gradient(180deg, #ff6b00, #ffdd00);
+        }
+        100% {
+            background: linear-gradient(180deg, #ffdd00, #ff6b00);
+        }
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #45a049;
+    }
+
+    .btn:focus {
+        outline: none;
+    }
+
+    .btn span {
+        display: inline-block;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+
+    .btn:hover span {
+        transform: translateX(4px);
+    }
+
+    .btn:before, .btn:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
+
+    .btn:before {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+
+    .btn:after {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    .btn:hover:before {
+        transform: scaleX(1);
+    }
+
+    .btn:hover:after {
+        transform: scaleY(1);
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn" onclick="showLogin()"><span>Login</span></button>
+   <a href="index.html" class="btn"><span>Register</span></a>
+
+</div>
+
+<script>
+    function showLogin() {
+        // Implement login logic or navigate to login page
+        console.log("Login button clicked");
+    }
+
+    function showRegister() {
+        // Implement register logic or navigate to register page
+        console.log("Register button clicked");
+    }
+</script>
+
+</body>
+</html>

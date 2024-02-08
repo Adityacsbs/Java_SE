@@ -5,6 +5,10 @@
 	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	 version="4.0">
     
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    
     <servlet>
         <servlet-name>first</servlet-name>
         <servlet-class>com.servlets.RegisterServlet</servlet-class>
@@ -12,6 +16,16 @@
     <servlet-mapping>
         <servlet-name>first</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>second</servlet-name>
+        <servlet-class>com.servlets.successregister</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>second</servlet-name>
+        <url-pattern>/ok</url-pattern>
     </servlet-mapping>
     
     
