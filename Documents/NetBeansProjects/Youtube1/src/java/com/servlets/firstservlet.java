@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import javax.servlet.RequestDispatcher;
+
 
 
 public class firstservlet extends HttpServlet  {
@@ -13,6 +15,7 @@ public class firstservlet extends HttpServlet  {
        resp.setContentType("text/html");
        
        PrintWriter ok=resp.getWriter();
+       
        
       
        ok.println("""
@@ -151,6 +154,15 @@ public class firstservlet extends HttpServlet  {
                           </div>
                       </div>
                   </body>""");
+       
+       //including index page by help of requestdispatcher
+       
+      RequestDispatcher rd = req.getRequestDispatcher("index.html");
+      
+      //include
+      
+      rd.include(req, resp);
+
     }
     
 }
