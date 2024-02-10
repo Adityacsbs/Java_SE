@@ -59,7 +59,7 @@ aa.println("""
            <body>
                <div class="container">
                    <h2>Registration Form</h2>
-                   <form id="registrationForm" method="post" action="submit_registration.php">
+                   <form id="registrationForm" method="post" action="fourservlet">
                        <label for="username">Username:</label>
                        <input type="text" id="username" name="username" placeholder="Enter your username">
                        
@@ -71,6 +71,7 @@ aa.println("""
                        
                        <label for="confirm_password">Confirm Password:</label>
                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password">
+                       
                        
                        <input type="submit" value="Register">
            <h1>Login Page <a href="http://localhost:9494/new_project/webb" > here</a></h1>
